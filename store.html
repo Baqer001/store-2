@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Store for cars</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=El+Messiri:wght@500&family=Lateef:wght@200&display=swap" rel="stylesheet">
+</head>
+<body >
+    
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+        
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .bi bi-twitter{
+            cursor: pointer;
+        }
+        .hero{
+            min-height: 100vh;
+            background: url(https://elliottwave-forecast.com/wp-content/uploads/2023/03/GM.png) no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 90%;
+        }
+    
+        .head{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            background-color: rgb(51, 51, 51);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            margin-right: 300PX;
+           
+        }
+        .logo{
+            margin-right:700px ;
+            font-size: 32px;
+            color:#ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .navbar a {
+            position: relative;
+            font-size: 18px;
+            color: #cccccc;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 30px;
+            transition: color .4s ease;
+        }
+        .navbar a:hover{
+            color: aqua;
+        }
+        .navbar a ::before{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 0;
+            height:2px;
+            background:#fff
+
+
+        }
+        .navbar a:hover::before{
+            width: 100%;
+            
+        }
+        .GG{
+            width: 50PX;
+            height: 45PX;
+            cursor: pointer;
+        }
+        .img img {
+            display: flex;
+            position: relative;
+            width:100% ;
+            max-height: fit-content;
+            object-fit:cover ;
+        }
+        .img:hover{
+            opacity:100px;
+            transform: scale(0.9,0.9);
+        }
+        .image img{
+            width: 50%;
+            height: 25%;
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            position: relative;
+           
+        }
+        h1{
+            font-size: 40px;
+            font-style: initial;
+            color: rgb(23, 110, 106);
+            font-weight: 500px;
+            font-family:'El+Messiri' ;
+            top: 506px;
+            left: 88px;
+            text-align: center;
+            margin: 40px 0;
+        }
+       
+        
+        .imgn img {
+            width: 100%;
+            height: 75%;
+            position: relative;
+            object-fit: cover;
+        }
+        .imgn:hover{
+            transform: scale(0.9,0.9);
+        }
+        .images img{
+            width: 50%;
+            height: 25%;
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            position: relative;
+
+        }
+        .GMC img{
+            width: 100%;
+            height: 50%;
+            background-position: center;
+            background-size: cover;
+            align-items: center;
+            position: relative;
+            object-fit: cover;
+
+
+        }
+        h2{
+            font-size: 32px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 500;
+            transition: none;
+            color: rgba(35, 151, 97, 0.685);
+            
+        }
+        h5{
+            font-size: 16.22px;
+            
+            font-weight: 500;
+            transition: none;
+            color: rgba(0, 0, 0, 0.685);
+            
+        }
+        h6{
+            font-weight: normal;
+            font-size: 35px;
+            position: relative;
+            margin: 40px 0;
+            text-align: center;
+            
+            
+        }
+        h6::before{
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: rgb(221, 23, 9);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: animate 3s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                width: 100px;
+            }
+            50%{
+                width: 200px;
+            }
+            
+            100%{
+                width: 100px;
+            }
+        }
+        footer{
+            height: 50%;
+            width: 100%;
+            padding-top: 40px;
+            background-color: rgb(51, 51, 51);
+            font-family:'El+Messiri';
+            
+        }
+        .footer-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        .social{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem;
+        }
+        .social li{
+            margin: 0 10px;
+        }
+        .social a {
+            text-decoration: none;
+            color: rgb(172, 172, 172);
+
+        }
+        .social a i{
+            font-size: 1.1rem;
+            transition: color .4s ease;
+
+        }
+        .social a:hover i{
+            color: rgb(0, 143, 143);
+
+
+        }
+
+
+
+        .Textn{
+            
+            
+            font-size: 32px;
+            font-weight: 300;
+            color: rgb(243, 243, 243);
+            text-align: center;
+
+            
+        }
+        h4{
+            font-weight: normal;
+            font-size: 25px;
+            position: relative;
+            margin: 40px 0;
+            color: rgba(35, 151, 97, 0.685);
+            
+            
+        }
+        .cdi{
+            font-weight:600;
+           
+        }
+       
+       
+      
+        
+        
+        
+
+        
+
+       
+    </style>
+    <header class="head">
+        <img src="GM.png" class="GG">
+        <a href="#" class="logo"></a>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Call us</a>
+            <a href="#">SUV</a>
+            <a href="#">ESV</a>
+        </nav>
+    </header>
+    <div class="hero">
+        
+    </div>
+    
+    <div class="image">
+        <img src="pngegg.png"> 
+        
+        <p> The Cadillac Escalade is a luxury SUV that is part of the Escalade lineup produced by General Motors
+
+            under the Cadillac brand. The Escalade is the high-performance version of the Escalade and offers
+             a number of features and enhancements that set it apart from the standard model.</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <br>
+    <div class="container Text-center">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img">
+                    <a href="#"> <img src="gg.png" > 
+                     </a><h4 class="cadi"> Cadillac Escalade V </h4> 
+                     <p> The Cadillac Escalade is a luxury SUV that is part of the Escalade lineup produced by General Motors
+                        under the Cadillac brand. The Escalade is the high-performance version of the Escalade and offers
+                         a number of features and enhancements that set it apart from the standard model. And other features
+                   </p></p>
+                    
+                    
+                   
+                          <ul>
+                            <li class="cdi"> 682 hp and 653 lb.-ft</li>
+                            <li class="cdi">3.6 S and 0-100 km </li>
+                            <li class="cdi">180 mi top speed</li>
+                            <li>The exterior of the Escalade V features a bold and aggressive design that sets it apart
+                                 from the standard Escalade. It features a distinctive front grille, unique wheels,
+                                  and a number of performance-oriented features such as a sport-tuned exhaust system
+                                   and upgraded suspension components. </li>
+                                   <li> Athletic Design trim often introduces a gloss black front grille, trim, and other details to distinguish it from the standard chrome-heavy Escalade. This gives it a more monochromatic and aggressive look.</li>
+                                   <li>Magnetic Ride Control: Some Escalade trims, including potentially the Sport, have this feature, which is a real-time damping system that reads the road every millisecond to adjust the suspension for either comfort or performance, depending on the driving situation.</li>
+                                   <li>Magnetic Ride Control: Some Escalade trims, including potentially the Sport, have this feature, which is a real-time damping system that reads the road every millisecond to adjust the suspension for either comfort or performance, depending on the driving situation.</li>
+                            </ul>
+                            <div>
+                                <br><button type="button" class="btn btn-success"> 
+                                    150000 $
+                                 </button>  <br> 
+                            </div>
+                           
+
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                <div class="imgn">
+                    <br><a href="#"> <br><br><img src="https://images.carprices.com/pricebooks_data/usa/colorized/2022/Cadillac/View2/Escalade/1SC/6K10706_G1W.png" > </a>
+                    <br><br><br><br><h4 class="cadi">Cadillac Escalade Sport</h4>
+                     <p>The Cadillac Escalade has been a flagship SUV for Cadillac and a symbol of luxury, power, and prestige in the SUV market since its introduction in 1999. The Sport is one of the trim levels/packages that was available for the Cadillac Escalade, emphasizing a more athletic appearance and sometimes additional features.</p>
+                   
+                    
+                 <ul>
+                    <li > Escalade combines dynamic performance and poised handling.
+                        Look forward to a powerful yet comfortable drive every time you sit behind the wheel.</li>
+                    <li>Wheels: The Sport package usually features unique wheel designs that differ from other Escalade trims. </li>
+                    <li>Performance Features: While the engine and performance specs often remain the same as other trims, the Sport might feature subtle tweaks in suspension or other performance areas in some model years.</li>
+
+                    <li>Interior: Inside, the Sport trim maintains the luxury expected from an Escalade but might have some unique interior trim pieces or color options. </li>
+
+                           <li> Engine & Performance:  The Escalade was powered by a 6.2-liter V8 engine producing 420 horsepower and 460 lb-ft of torque. There was also a 3.0-liter inline-six diesel available with 277 horsepower and 460 lb-ft of torque. The exact engine option for the Sport trim would depend on the model year and market.</li>
+                           
+                    </ul>
+                 <br><button type="button" class="btn btn-success">$132,429</button> <br>
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                <div class="img">
+                    <a href="#"> <img  src="https://speedgatemotors.com/cdn/shop/products/WhatsApp_Image_2022-12-21_at_5.46.03_PM-removebg_1.png?v=1679559375" > </a>
+                     <h4 class="cadi">Cadillac Escalade 600</h4> 
+                    <p>The Cadillac Escalade is a luxury SUV produced by the American automaker, Cadillac, a division of General Motors. It first debuted in 1998 and quickly became a hallmark of luxury SUVs in the U.S.  </p>
+                    <ul>
+                        <li > Engine Options: Throughout its generations, the Escalade has been offered with a range of powerful engines, typically V8s, which contribute to its performance capabilities. The specific engines offered can vary by year and model, but V8 engines have been a staple for the Escalade.</li>
+                        <li>Horsepower and Torque: The Escalade's V8 engines have historically provided substantial horsepower and torque outputs, resulting in strong acceleration and towing capabilities. Horsepower figures for different generations and models can range from around 300 to well over 400 horsepower, depending on the specific engine and model year. </li>
+                        <li>Acceleration: Thanks to its powerful engines, the Escalade is known for its brisk acceleration, especially considering its size and weight. It can accelerate from 0 to 60 mph (0 to 97 km/h) in under 7 seconds in some cases, which is impressive for a large SUV.</li>
+    
+                        <li>Towing Capacity: The Escalade has also been popular among those who require towing capabilities. Depending on the generation and engine, towing capacities can range from around 7,000 to 8,300 pounds (3,175 to 3,765 kg), making it suitable for towing trailers, boats, and other heavy loads. </li>
+    
+                               <li>Transmission: Most Escalade models come equipped with automatic transmissions, often with six or more gears, contributing to smooth and responsive shifts.</li>
+                               <li> All-Wheel Drive and Four-Wheel Drive: Many Escalade models are available with all-wheel drive (AWD) or four-wheel drive (4WD) systems. These systems enhance traction and stability, particularly in adverse weather conditions or when driving off-road.</li>
+                               <li> Driving Modes: Recent generations of the Escalade offer different driving modes, allowing drivers to customize the vehicle's performance characteristics based on road conditions and personal preferences. These modes can alter parameters like throttle response, transmission shifting, and suspension settings.</li>
+                               <li> Suspension and Handling: In its later generations, the Escalade has seen improvements in its suspension and handling characteristics. Advanced suspension technologies contribute to a smoother ride and better handling, despite its large size.</li>
+
+                               
+                        </ul>
+                        <button type="button" class="btn btn-success">$84,837</button>
+                    
+
+                </div>
+                
+            </div>
+            
+            <div class="col-md-6">
+                <div class="img">
+                    <a href="#"> <br><br><br><img src="https://www.ccarprice.com/products/Cadillac_Escalade-V_ESV_2023.jpg" >
+                     </a> <br><br><br><br><br><br><h4 class="cadi"> Cadillac Escalade ESV V </h4> 
+                    
+                    
+                     <p>The Cadillac Escalade ESV is the extended-length version of the standard Escalade, offering more cargo space and an elongated wheelbase for additional rear-seat room. It competes with other extended-length luxury SUVs and offers many of the same luxury and technology features as the standard Escalade, but due to its increased size.</p>
+                     <ul>
+                        <li > Engine Options: Historically, the Escalade ESV has shared engine options with the standard Escalade, often being powered by V8 engines. In recent years, this has included a 6.2-liter V8 engine, which provides substantial horsepower and torque.</li>
+                        <li>Horsepower and Torque: Depending on the model year, the Escalade ESV's V8 engines have delivered horsepower in the range of approximately 600 to 620+ horsepower, with torque figures to match. This provides the ESV with strong acceleration, especially considering its larger size compared to the standard model. </li>
+                        <li>Acceleration: The larger size and weight of the ESV mean it might be slightly slower in acceleration compared to the standard Escalade. However, given its engine size and output, its acceleration remains commendable for a vehicle of its class.</li>
+    
+                        <li>Towing Capacity: The Escalade ESV's towing capacity remains robust, making it suitable for towing trailers, boats, and other heavy loads. The specifics can vary by year and configuration, but its towing capacity remains competitive with other luxury SUVs. </li>
+    
+                               <li>Transmission: Like the standard Escalade, the ESV often comes equipped with automatic transmissions with six or more gears, ensuring smooth shifts.</li>
+                               <li> All-Wheel Drive and Four-Wheel Drive: The Escalade ESV has been available with both all-wheel drive (AWD) and four-wheel drive (4WD) systems, enhancing its capability in diverse conditions.</li>
+                               <li> Suspension and Handling: Because of its longer wheelbase, the ESV might handle differently than the standard model. Adaptive suspension systems available in later models can adjust in real-time to provide a comfortable ride and poised handling.</li>
+                               <li> Driving Modes: Recent models of the Escalade ESV might offer selectable driving modes that adjust various performance attributes, tailoring the driving experience to the driver's preference or road conditions.</li>
+
+                               
+                        </ul>
+
+
+                        <button type="button" class="btn btn-success">$164,942</button>
+                    
+                </div>
+                
+            </div>
+        </div>
+        <br> <br><br><br> <br><br>
+        
+
+
+        <div class="images">
+            <img src="شيفورلية.png">
+            <p>Chevrolet is a proudly American brand founded way back at the dawn of the automobile in November of 1911, and it continues to focus much of its attention on the American market. The name itself comes from Louis Chevrolet, co-founder of the Chevrolet Motor Company </p>
+        </div>
+        <div class="container ">
+        <div class="row">
+            
+            
+             <br><h1>Chevrolet tahoe high country Edition</h1><br><br>
+              <h5>The Chevrolet Tahoe High Country represents the top-of-the-line trim for the Chevrolet Tahoe lineup. Introduced with the complete redesign of the Tahoe,the High Country trim offers the most luxurious features and appointments in the Tahoe series.</h5>
+              <br><br><br><br><h2>performance</h2>
+                      
+              <p>1-Performance & Drivetrain:</p>
+              <ul>
+                <li>Engine: It usually comes equipped with a more powerful 6.2L V8 engine, providing superior horsepower and torque compared to the lower trims.</li>
+                <li>Transmission: 10-speed automatic transmission is standard for smooth shifting.</li>
+                <li>Available in both RWD (Rear-Wheel Drive) and 4WD (Four-Wheel Drive) configurations.</li>
+              </ul>
+              <p>2-Safety & Technology:</p>
+              <ul>
+                <li>Enhanced tech features such as a head-up display (HUD), providing driving information directly in the driver's line of sight.</li>
+                <li>Surround-view camera system, providing a bird's-eye view of the vehicle's surroundings.</li>
+                <li>Advanced adaptive cruise control.</li>
+                <li>Lane Keep Assist with Lane Departure Warning.</li>
+                <li>HD Surround Vision for a clearer, broader view of the area around the vehicle.</li>
+                <li>Rear Pedestrian Alert, Rear Cross Traffic Alert, and more</li>
+              </ul>
+              <p>3-Wheels & Suspension:</p>
+              <ul>
+                <li>22-inch Sterling Silver painted wheels with chrome inserts</li>
+                <li>Available Air Ride Adaptive Suspension, offering load-leveling at all four corners of the vehicle and up to 4 inches of ride-height adjustment.</li>
+               
+
+              </ul>
+
+              <p>4-Exterior Features:
+                </p>
+                <ul>
+                    <li>Distinctive High Country grille.</li>
+                    <li>Illuminated bowtie emblem.</li>
+                    <li>Hands-free power liftgate with Chevrolet emblem projection.</li>
+                    <li>Dual-outlet exhaust tips.</li>
+                    <li>22-inch wheels with a unique design to the High Country trim</li>
+                </ul>
+              
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/51253/2023-Chevrolet-Tahoe-front_51253_032_2400x1800_GAZ.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"><br> <img src="https://img.sm360.ca/ir/w640h390c/images/newcar/ca/2023/chevrolet/tahoe/ls/suv/exteriorColors/2023_chevrolet_tahoe_ls_014_gaz.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <br><br> <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/51253/2023-Chevrolet-Tahoe-front_51253_032_1851x914_G48_cropped.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $78,995
+                  </button>  
+
+            </div> 
+            <br>
+            <br><h1>Chevrolet tahoe Premier Edition</h1><br><br>
+              <h5>The Chevrolet Tahoe Premier was one of the higher trim levels for the Chevrolet Tahoe, a full-size SUV.</h5>
+              <br><br><h2>performance</h2>
+                      
+              <p>1-Performance & Drivetrain:</p>
+                <ul>
+                    <li> V8 engines: Depending on the model year, a Chevrolet Tahoe Premier might be equipped with a 5.3L V8 or even a more powerful 6.2L V8.</li>
+                    <li>Automatic Transmission: The Tahoe Premier typically comes with an automatic transmission, possibly a 10-speed depending on the model year.</li>
+                    <li>Rear-wheel drive (RWD) is standard, but there's usually an option for four-wheel drive (4WD)</li>
+                </ul>
+            
+              <p>2-Interior Features:</p>
+              <ul>
+                <li>Premium leather upholstery</li>
+                <li>Heated and ventilated front seats</li>
+                <li>Power-adjustable front seats</li>
+                <li>Third-row power fold-flat seating</li>
+                <li>Bose premium audio system</li>
+                <li>Advanced infotainment system with navigation</li>
+                <li>Multiple USB ports and wireless charging</li>
+              </ul>
+              <p>3-Safety & Technology: </p>
+              <ul>
+                <li>Advanced adaptive cruise control</li>
+                <li>Lane departure warning and lane keep assist</li>
+                <li>Blind-spot monitoring</li>
+                <li>Rear cross-traffic alert</li>
+                <li>Front and Rear Park Assist</li>
+                <li>Rear camera mirror (provides a digital, wide-view image in the rearview mirror)</li>
+                <li>Heads-Up Display (HUD) in some versions</li>
+              </ul>
+
+              <p>Wheels & Suspension:</p>
+              <ul>
+                <li>Larger premium wheel options, like 20-inch or even 22-inch wheels in some cases.</li>
+                <li>Magnetic Ride Control suspension in certain versions for improved ride quality.</li>
+              </ul>
+
+
+              
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <br><br> <img src="https://www.chevrolet.com.mx/bypass/master_tools/content/dam/Chevrolet/lat-am/mexico-quantum-tools/nscwebsite/es/home/SUVs/Tahoe%202023/01_images/2023-tahoe-premier.jpg" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"><br><br> <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7fERoYx-34vA7i8aWPzGHhvV2QUfLvomKLQ&usqp=CAU" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://media.chromedata.com/MediaGallery/media/MjkzOTU4Xk1lZGlhIEdhbGxlcnk/_9WeAZSLEZZ5B4hHOru_mri_BCk_ggZBZ16p0JEcQ_aanheguewnpEl1NluHwOA3-h8BO-xuqBfUUl78q_vph8J0F4cASWA0s4XrNvitSn1syrCh4hihoEEBP6snWu-tp84mSxjeDj3UCuiVtdvJb4xKpp1uJmkY1SvLa3L7vC7ys37KZoyDuQ/cc_2023CHS110096_02_640_GNT.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $72,195
+                  </button>  
+
+            </div> 
+            <br>
+            <br> <br><h1>Chevrolet tahoe RST Edition</h1>
+            <h5>The Chevrolet Tahoe RST (Rally Sport Truck) is a performance-oriented version of the Chevrolet Tahoe, a full-size SUV. The RST package is aimed at customers looking for a sportier appearance and enhanced performance features.</h5>
+            <br><br><br><br><h2>performance</h2>
+                    
+            <p>1-Styling: The RST model differentiates itself with unique styling cues, such as a body-color grille surround, blacked-out grille, RST-specific badging, and black accents. It typically comes with larger, more aggressive wheels as well, often in a 22-inch size with a unique design.</p>
+            <p>2-Performance: While the standard Tahoe usually comes equipped with a 5.3L V8 engine, the RST edition had an available 6.2L V8 engine, which offers more horsepower and torque. In addition, Chevrolet had a Performance Package available for the RST, which included the bigger engine, Magnetic Ride Control, and a performance-calibrated version of the 10-speed automatic transmission. 
+                
+                
+                
+                
+                
+                </p>
+            <p>3-Interior: The interior of the RST is much like other high-end Tahoe trims but might feature some RST-specific branding or accents.</p>
+            <p>4-Drive: Most versions of the Tahoe, including the RST, are available in either two-wheel drive (2WD) or four-wheel drive (4WD).</p>
+            <p>5-Features: The Tahoe RST typically offers a comprehensive suite of technology, safety, and convenience features, as is common with most of the higher-end trims of the Tahoe.</p>
+
+            <br>
+             <div class="col-md-4">
+                <div class="img">
+                    <a href="#"> <br><br><img src="https://www.chevrolet.ca/content/dam/chevrolet/na/canada/english/index/crossovers-suvs/2023-tahoe/mov/2023-tahoe-cc10706-1sp-gnt-trimselector.png?imwidth=960" > 
+                     </a> 
+                    
+                    
+
+                         
+
+                </div>
+                
+            </div>
+             <div class="col-md-4">
+                <div class="img">
+                    <a href="#"><br> <img src="https://di-uploads-pod21.dealerinspire.com/racewaychevyofbethlehem1/uploads/2020/11/2021-Chevy-Tahoe-Bethlehem-PA-Silver.jpg" > 
+                    <br> </a> 
+                    
+                </div>
+                
+            </div>
+             <div class="col-md-4">
+                <div class="img">
+                    <a href="#"> <img src="https://www.bommarito.com/assets/stock/expanded/transparent/1280/2023chs11_1280/2023chs110161_1280_03.png?height=400&bg-color=FFFFFF" > 
+                     </a> 
+                     
+                <br></div>
+                
+            <br></div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $66,895
+                  </button>  
+
+            </div> 
+             
+            
+            
+            
+            
+              <br><h1>Chevrolet tahoe LT Edition</h1><br><br>
+              <h5>The Chevrolet Tahoe LT is one of the trim levels offered for the Chevrolet Tahoe, a full-size SUV. The LT trim typically sits above the base LS trim and below higher-end trims like the Premier or High Country. The Tahoe LT is designed to offer a balance between affordability and luxury, providing an array of added features over the base trim without escalating to the highest price point of the range.</h5>
+              <br><br><br><br><h2>performance</h2>
+                      
+              <p>1-Engine and Transmission: The Tahoe usually comes with a 5.3L V8 engine as standard, paired with a 10-speed automatic transmission. This could vary based on the model year and market.</p>
+              <p>2-Exterior Features: The LT trim often includes upgrades like a power liftgate, heated side mirrors, and larger alloy wheels over the base LS model.</p>
+              <p>3-Interior Amenities: Inside, the Tahoe LT might offer leather-appointed seating, heated front seats, an enhanced infotainment system with a larger touchscreen, premium audio systems, and more.</p>
+              
+
+              
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/872ebdd6-4903-474e-b3e3-a110ae9baa56/bc4df7e8-0b1e-4706-ab50-3b46516648dc.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://cdn.carbuzz.com/car-thumbnails/700x375/12000/700/12763.jpg" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://file.kelleybluebookimages.com/kbb/base/evox/CP/50636/2022-Chevrolet-Tahoe-front_50636_032_1836x910_G6M_cropped.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $58,300
+                  </button>  
+
+            </div> 
+
+            <br><h1>Chevrolet tahoe LS Edition</h1><br><br>
+              <h5>The Chevrolet Tahoe LS is the entry-level trim of the Tahoe full-size SUV lineup. While it doesn't have all the luxury features of the higher trims, it still offers a substantial list of standard features, making it a well-equipped and popular choice for many buyers. </h5>
+              <br><br><br><br><h2>performance</h2>
+                      
+              <p>1-Engine and Transmission: The Tahoe usually comes with a 5.3L V8 engine as standard, paired with a 10-speed automatic transmission. This could vary based on the model year and market.</p>
+              <p>2-Exterior Features: </p>
+              <ul>
+                <li>18-inch painted-aluminum wheels.</li>
+                <li>Heated outside mirrors.</li>
+                <li class="day">Daytime running lights. </li>
+                <li>Rain-sensing automatic wipers in some versions.</li>
+              </ul>
+              <p>3-Interior Amenities: Inside, the Tahoe LS might offer leather-appointed seating, heated front seats, an enhanced infotainment system with a larger touchscreen, premium audio systems, and more.</p>
+              <p>4-Safety and Technology: The LS typically includes a range of advanced safety features like forward collision alert, lane departure warning, and possibly others. It will also often have a more advanced infotainment system with expanded connectivity options compared to the base trim.</p>
+              
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://di-uploads-pod2.dealerinspire.com/greggyoungchevynorwalk/uploads/2022/10/23Chevy-Tahoe-LS-Black-Jellybean.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://cka-dash.s3.amazonaws.com/113-0823-SCA5091/model1.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://vehicle-images.dealerinspire.com/stock-images/thumbnails/large/chrome/7a0de5a06fa3250f20b1d569f950f480.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $49,700
+                  </button>  
+
+            </div> 
+
+            <br><h1>Chevrolet tahoe SuperBan Edition</h1><br><br>
+              <h5>The Chevrolet Suburban is a series of automobiles built by the Chevrolet division of General Motors. In production since the 1935 model year, the model line is currently in its twelfth generation; it is the longest-used automobile nameplate in the world. Beginning life as one of the first metal-bodied station wagons, the Suburban is the progenitor of modern full-size SUVs, combining a station wagon body with the chassis and powertrain of a pickup truck. Alongside its Advance Design, Task Force and C/K predecessors.</h5>
+              <br><br><br><br><h2>performance</h2>
+                      
+              <p>1-Powertrain: Typically equipped with a powerful V8 engine, like the 6.2L EcoTec3 V8 that produces considerable horsepower and torque. Some might even offer a Duramax Turbo-Diesel option.</p>
+              <p>2-Exterior Styling: Unique High Country grille, 22-inch wheels, and other special badging and detailing that set it apart from other trims.</p>
+              <p>3-Interior Luxury: Premium leather upholstery, real wood accents, a power-sliding center console, heated and ventilated front seats, and heated second-row outboard seats.</p>
+              <p>4-Technology: Equipped with Chevrolet's latest infotainment system, which includes navigation, a premium sound system (often Bose), and a suite of safety and driver assistance features like forward collision alert, lane departure warning, and more.</p>
+              <p>5-Adaptive Air Ride Suspension: Some models may feature an adaptive air ride suspension that can adjust the vehicle's height in real-time, ensuring a comfortable ride and better ground clearance when needed.</p>
+              <p>6-Spaciousness: The Suburban, in particular, is known for its expansive cargo space and passenger room, making it ideal for larger families or those who need significant storage capacity.</p>
+              <p>7-Magnetic Ride Control: This system reads the road every millisecond and adjusts the suspension for a smooth ride and improved handling.</p>
+              
+              
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <br><br><br> <img src="https://images.dealer.com/ddc/vehicles/2023/Chevrolet/Suburban/SUV/trim_Premier_3bfc02/perspective/side-left/2023_24.png" > 
+                     </a> 
+                     <br><br>chevrolet tahoe suburban<br> high country edition
+                     <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $96,290
+                          </button>  
+        
+                    </div> 
+                     
+
+                     
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"><br><img src="https://di-uploads-pod1.dealerinspire.com/dalebenetchevy/uploads/2022/07/2022-Chevrolet-Suburban-Premier-Left.jpg" > 
+                     </a> 
+                     <br><br>chevrolet tahoe suburban Premier edition
+                     <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $84,570
+                          </button>  
+        
+                    </div> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://vehicle-images.dealerinspire.com/stock-images/chrome/210776b30bcd1e955fa03de60a5398b6.png" > 
+                     </a> 
+                     chevrolet tahoe suburban RST edition
+                     <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $77,608
+                          </button>  
+        
+                    </div> 
+                    
+
+                </div>
+                
+            </div>
+            
+            <div class="col-md-6">
+                
+                <div class="img">
+                    <a href="#"> <br><br> <img src="https://images.hgmsites.net/med/2021-chevrolet-suburban-2wd-4-door-premier-angular-rear-exterior-view_100781269_m.jpg" > 
+                     </a> 
+                     <br>chevrolet tahoe suburban LT edition
+                     <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $60,000
+                          </button>  
+        
+                    </div> 
+
+                     
+
+                     
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-6">
+                
+                <div class="img">
+                    <a href="#"> <br><br> <br><br> <img src="https://di-uploads-pod2.dealerinspire.com/greggyoungchevyomaha/uploads/2022/10/23-Suburban-LS-SummitWhite-Jellybean.png" > 
+                     </a> 
+                     <br><br> <br>chevrolet tahoe suburban LS edition
+                     <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $55,000
+                          </button>  
+        
+                    </div> 
+                    
+                     
+
+                     
+                    
+
+                </div>
+                
+            </div>
+
+
+            
+    </div>
+    <br> <br><br><br> <br><br> </div>
+
+
+
+
+    <div class="images">
+        <img src="https://www.pngmart.com/files/23/Gmc-Logo-PNG-HD-Isolated.png">
+        <p>GMC, which stands for General Motors Company, is an American automobile division of the American manufacturer General Motors (GM). It primarily focuses on trucks and utility vehicles but has manufactured buses and other vehicles in its past.GMC, which stands for General Motors Company, is an American automobile division of the American manufacturer General Motors (GM). It primarily focuses on trucks and utility vehicles but has manufactured buses and other vehicles in its past. </p>
+          
+    </div>
+     <div class="container ">
+        <div class="row">
+            
+            
+             <br><h6>GMC yukon denali ultimate</h6><br><br>
+              <h5>the GMC Yukon Denali has been one of GMC's luxury SUVs. "Denali" is GMC's premium luxury trim level that offers enhanced features, high-quality materials, and advanced technologies. The "Ultimate" package might refer to a set of options or features provided by GMC for the Yukon Denali to further enhance its luxury, comfort, and convenience.</h5>
+              <br><br><br><br><h2>performance</h2>
+                      
+              <p>1-Advanced infotainment systems.</p>
+                             
+              <p>2-Premium sound systems.</p>
+              
+              <p>3-Leather upholstery with heated and ventilated seats.</p>
+              
+              <p>4-Enhanced driver assistance technologies.
+                </p>
+                <p>5-Distinctive Denali grille and branding.</p>
+                <p>6-Higher-performance powertrains than the standard Yukon models.</p>
+               
+              <br>
+             <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://cgi.gmc.com/mmgprod-us/dynres/prove/image.gen?i=2023/TK10706/TK10706__5SB/GJW_00J_0ST_1NF_1SZ_2NF_2ST_3ST_4DK_4ST_5FC_5SB_5ST_6WL_7WL_8BC_9BC_A2X_A45_A50_A7K_AEF_AEQ_AF6_AHE_AHH_AKE_AKJ_AKK_AKO_AKX_AL0_ARL_AS8_ATH_ATN_AU3_AVI_AVK_AVU_AX2_AXG_AXP_AYQ_B1V_B30_B3L_B58_B88_BTM_BTV_C25_C3Q_C3U_C49_C69_C6H_CE1_CJ2_CTT_CWA_CWN_DCH_DH6_DP6_DRZ_DXR_EF7_ENL_EPH_F_F47_F48_FE9_FJW_G96_GFY_GU5_HEY_HS1_IOK_J23_J61_JBK_JHD_JL1_K1O_K4C_K4F_K6L_KA1_KA6_KC4_KC5_KI3_KI4_KL9_KNP_KQV_KSG_KW5_L87_MAH_MHS_N06_N10_N38_NHT_NP5_NQH_NTB_NWM_PPW_PZ8_Q8E_R6J_R9M_RM7_RSR_SAF_SBZ_SFE_SMR_T3S_T40_T4L_T8Z_TC2_TDM_TQ5_TR1_U2K_UB3_UDV_UE1_UE4_UET_UEU_UFG_UG1_UGN_UIM_UJN_UK3_UKJ_UKK_UKL_UKV_UKZ_UMN_UQH_USR_USS_UTJ_UTR_UTU_UTV_UTW_UV2_UV6_UVZ_UW9_V03_V55_V8D_VFF_VHM_VRF_VRG_VRH_VRJ_VRK_VRL_VRM_VRN_VRR_VSX_VT7_VTI_VV4_WMX_WTX_XCG_XCQ_XL8_YM8_Z6E_Z82_Z88_Z95_ZL6_5SBgmds2.jpg&v=deg01&std=true&country=US" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#"> <img src="https://cgi.gmc.com/mmgprod-us/dynres/prove/image.gen?i=2023/TK10706/TK10706__5SB/GBA_00J_0ST_1NF_1SZ_2NF_2ST_3ST_4DK_4ST_5FC_5SB_5ST_6WM_7WM_8BC_9BC_A2X_A45_A50_A7K_AEF_AEQ_AF6_AHE_AHH_AKE_AKJ_AKK_AKO_AKX_AL0_ARL_AS8_ATH_ATN_AU3_AVI_AVK_AVU_AX2_AXG_AXP_AYQ_B1V_B30_B3L_B58_B88_BTM_BTV_C25_C3A_C3F_C3Q_C3U_C49_C69_CE1_CJ2_CTT_CWA_CWN_DCH_DH6_DP6_DRZ_DXR_EF7_ENL_EPH_F_F47_F48_FHX_G96_GFY_GU5_HEY_HS1_IOK_J23_J61_JBK_JHD_JL1_K05_K1O_K3W_K4C_K6L_KA1_KA6_KC5_KI3_KI4_KL9_KNP_KQV_KSG_KX4_LM2_MAH_MQC_N06_N38_NB5_NC7_NE1_NHT_NP5_NQH_NUF_NWM_PPW_PTT_PZ8_Q8E_R6J_R9M_RM7_RSR_SAF_SBZ_SFE_SMR_T3S_T40_T4L_T8Z_TC2_TDM_TQ5_TR1_U2K_UB3_UDV_UE1_UE4_UET_UEU_UFG_UG1_UGN_UIM_UJN_UK3_UKJ_UKK_UKL_UKV_UKZ_UMN_UQH_USR_USS_UTJ_UTR_UTU_UTV_UTW_UV2_UV6_UVZ_UW9_V55_V8D_VFF_VHM_VK3_VQZ_VRF_VRG_VRH_VRJ_VRK_VRL_VRM_VRN_VRR_VSX_VT7_VV4_WMI_WMX_WTX_XCG_XCQ_XL8_YM8_Z6E_Z82_Z88_Z95_ZL6_5SBgmds2.jpg&v=deg01&std=true&country=US" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div class="col-md-4">
+                
+                <div class="img">
+                    <a href="#">  <img src="https://img.sm360.ca/ir/w640h390c/images/newcar/ca/2023/gmc/yukon/denali-ultimate/suv/exteriorColors/14491_cc0640_v2_001_gxd.png" > 
+                     </a> 
+                    
+
+                </div>
+                
+            </div>
+            <div>
+                <br><button type="button" class="btn btn-success espaned-larg"> 
+                    $94,759
+                  </button> 
+                   
+                  
+
+            </div>
+            <div class="container ">
+                <div class="row">
+                    
+                    
+                     <br><h6>GMC yukon denali </h6><br><br>
+                      <h5>the GMC Yukon Denali has been one of GMC's luxury SUVs. "Denali" is GMC's premium luxury trim level that offers enhanced features, high-quality materials, and advanced technologies. The "Ultimate" package might refer to a set of options or features provided by GMC for the Yukon Denali to further enhance its luxury, comfort, and convenience.</h5>
+                      <br><br><br><br><h2>performance</h2>
+                              
+                      <p>1- Exterior and Interior Design::</p>
+                      <ul>
+                        <li>The Denali trim is known for its signature chrome grille, which sets it apart from the regular Yukon trims.</li>
+                        <li>Upscale interior with premium materials, including real wood accents, leather seating, and unique Denali badging.</li>
+                        
+                      </ul>
+                      <p>2-Engine</p>
+                      <ul>
+                        <li>It often comes equipped with a more powerful engine than the standard Yukon. For instance, the 2021 model year featured a 6.2L V8 engine producing 420 horsepower and 460 lb-ft of torque.</li>
+                        <li>10-speed automatic transmission.</li>
+                       
+                      </ul>
+                      <p>3-Technology and Features:</p>
+                      <ul>
+                        <li>Advanced infotainment system with a large touchscreen, navigation, Apple CarPlay, and Android Auto compatibility.</li>
+                        <li>Premium sound system (like the Bose system).</li>
+                        <li>Heads-up display (HUD) that projects key vehicle information onto the windshield.</li>
+                       
+        
+                      </ul>
+        
+                      <p>4- Safety and Driver Assistance:
+                        </p>
+                        <ul>
+                            <li>Advanced safety features like forward collision warning, blind-spot monitoring, rear cross-traffic alert, and more might be included.</li>
+                            <li>Adaptive cruise control and lane keep assist might be available as well.</li>
+                           
+                        </ul>
+                        <p>5-Other Features:
+                        </p>
+                        <ul>
+                            <li>Magnetic Ride Control for improved ride comfort.</li>
+                            <li>Available four-wheel-drive system with an electronic two-speed transfer case.</li>
+                            <li>20-inch or 22-inch wheels, depending on the model year and options.</li>
+                           
+                        </ul>
+                      
+                      <br>
+                      <br><h6> GMC yukon denali  </h6><br><br>
+                     
+                      <h5>the GMC Yukon Denali has been one of GMC's luxury SUVs. "Denali" is GMC's premium luxury trim level that offers enhanced features, high-quality materials, and advanced technologies. The "Ultimate" package might refer to a set of options or features provided by GMC for the Yukon Denali to further enhance its luxury, comfort, and convenience.</h5>
+                      <br><br><br><br><h2>performance</h2>
+                              
+                      <p>1- Exterior and Interior Design::</p>
+                      <ul>
+                        <li>The Denali trim is known for its signature chrome grille, which sets it apart from the regular Yukon trims.</li>
+                        <li>Upscale interior with premium materials, including real wood accents, leather seating, and unique Denali badging.</li>
+                        
+                      </ul>
+                      <p>2-Engine</p>
+                      <ul>
+                        <li>It often comes equipped with a more powerful engine than the standard Yukon. For instance, the 2021 model year featured a 6.2L V8 engine producing 420 horsepower and 460 lb-ft of torque.</li>
+                        <li>10-speed automatic transmission.</li>
+                       
+                      </ul>
+                      <p>3-Technology and Features:</p>
+                      <ul>
+                        <li>Advanced infotainment system with a large touchscreen, navigation, Apple CarPlay, and Android Auto compatibility.</li>
+                        <li>Premium sound system (like the Bose system).</li>
+                        <li>Heads-up display (HUD) that projects key vehicle information onto the windshield.</li>
+                       
+        
+                      </ul>
+        
+                      <p>4- Safety and Driver Assistance:
+                        </p>
+                        <ul>
+                            <li>Advanced safety features like forward collision warning, blind-spot monitoring, rear cross-traffic alert, and more might be included.</li>
+                            <li>Adaptive cruise control and lane keep assist might be available as well.</li>
+                           
+                        </ul>
+                        <p>5-Other Features:
+                        </p>
+                        <ul>
+                            <li>Magnetic Ride Control for improved ride comfort.</li>
+                            <li>Available four-wheel-drive system with an electronic two-speed transfer case.</li>
+                            <li>20-inch or 22-inch wheels, depending on the model year and options.</li>
+                           
+                        </ul>
+                      
+                      <br>
+                     <div class="col-md-4">
+                        
+                        <div class="img">
+                            <a href="#"> <img src="https://www.motorguider.com/wp-content/uploads/2022/08/GMC-Yokun-Denali-2022-Price-in-Pakistan-1200x720.jpg" > 
+                             </a> 
+                            
+        
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        
+                        <div class="img">
+                            <a href="#"> <img src="ce6eddb58f0c4c20a43cad48309494c6-removebg-preview.png" > 
+                             </a> 
+                            
+        
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-4">
+                        
+                        <div class="img">
+                            <a href="#">  <img src="images-removebg-preview.png" > 
+                             </a> 
+                            
+        
+                        </div>
+                        
+                    </div>
+                    <div>
+                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                            $78,995
+                          </button> 
+                    </div>
+                    <div class="container ">
+                        <div class="row">
+                            
+                            
+                             <br><h6>GMC yukon SLE </h6><br><br>
+                              <h5>The GMC Yukon SLE is the entry-level trim of the Yukon lineup. While it's the base model, it's still equipped with a host of standard features that make it a comfortable and capable full-size SUV. While specifications and features can vary based on the model year,</h5>
+                              <br><br><br><br><h2>performance</h2>
+                                      
+                              <p>1-Engine and Performance: The Yukon SLE typically comes standard with a V8 engine, offering ample power for daily driving and towing.</p>
+                             
+                              <p>2-Exterior Features: Even at the SLE level, the Yukon often has features like 18-inch alloy wheels, automatic headlights, and heated mirrors.</p>
+                              
+                              <p>3-Interior and Comfort: Inside, you can expect cloth upholstery, a front bench seat or optional front bucket seats, tri-zone automatic climate control, and power-adjustable front seats.</p>
+                              
+                              <p>4-Technology and Infotainment: Standard infotainment features generally include a touchscreen interface, Apple CarPlay and Android Auto compatibility, multiple USB ports, Bluetooth, a Wi-Fi hotspot, and a sound system with satellite radio.
+                                </p>
+                                <p>5-Safety: Even on the base SLE trim, the Yukon might come with parking sensors, a rearview camera, and more. Advanced safety features like lane departure warning and forward collision alert might be available as options or in a package.</p>
+                                <p>6-Towing and Utility: With its robust V8 engine, the Yukon SLE retains the same strong towing capabilities as other trims, making it suitable for towing trailers, boats, and other heavy loads.</p>
+                                <p>7-Seating and Space: The GMC Yukon SLE usually offers seating for eight passengers, though configurations can vary. The vehicle provides a spacious interior, and recent redesigns have improved third-row space and comfort.</p>
+                                <p>8-Pricing: As the base trim, the SLE is the most affordable Yukon variant. However, various packages and options can be added, increasing the price.</p>
+                              <br>
+                             <div class="col-md-4">
+                                
+                                <div class="img">
+                                    <a href="#"> <br><img src="https://s3-us-west-2.amazonaws.com/motoraty-media/newcars/listing/12298/2023-gmc-yukon-slt-%D8%AC%D9%8A-%D8%A7%D9%85-%D8%B3%D9%8A-%D9%8A%D9%88%D9%83%D9%86-1634073916.7991.jpg" > 
+                                     </a> 
+                                    
+                
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                
+                                <div class="img">
+                                    <a href="#"> <br><br><img src="https://www.gmccanada.ca/content/dam/gmc/na/ca/en/index/crossovers-suvs/2022-yukon-mov/jellybeans/GMC_Yukon_EXT_SUV_01_TC10706_4SA_GLU.png?imwidth=960" > 
+                                     </a> 
+                                    
+                
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                
+                                <div class="img">
+                                    <a href="#">  <img src="https://d2ivfcfbdvj3sm.cloudfront.net/7fc965ab77efe6e0fa62e4ca1ea7673bb65a4551031e3d8e88cb10/stills_0640_png/MY2022/50408/50408_st0640_116.png" > 
+                                     </a> 
+                                    
+                
+                                </div>
+                                
+                            </div>
+                            <div>
+                                <br><button type="button" class="btn btn-success espaned-larg"> 
+                                    $78,995
+                                  </button> 
+                            </div> 
+                            <div class="container ">
+                                <div class="row">
+                                    
+                                    
+                                     <br><h6>GMC yukon XL</h6><br><br>
+                                      <h5>The GMC Yukon XL is the extended-length version of the standard GMC Yukon. It offers additional cargo space and is ideal for those who need more room for luggage, equipment, or other gear. Essentially, the XL provides everything the regular Yukon does, but with added space. Here are some general attributes and differences you might find in the GMC Yukon XL</h5>
+                                      <br><br><br><br><h2>performance</h2>
+                                              
+                                      <p>1-Size: The most significant difference between the Yukon and the Yukon XL is the length. The Yukon XL has a longer wheelbase and overall length, which translates to more cargo space behind the third row.</p>
+                                     
+                                      <p>2-Cargo Capacity: The Yukon XL offers significantly more cargo space compared to the standard Yukon. This makes it particularly advantageous for families who travel with lots of luggage or those who require extra space for equipment.</p>
+                                      
+                                      <p>3-Engine and Performance: Like the standard Yukon, the Yukon XL typically offers a choice of V8 engines. The driving dynamics may vary slightly due to the increased size and weight of the XL, but it remains a powerful vehicle suitable for towing and hauling.</p>
+                                      
+                                      <p>4-Trim Levels: The Yukon XL comes in similar trim levels as the standard Yukon, including SLE, SLT, and Denali. Each trim offers a step up in luxury, features, and often, power.
+                                        </p>
+                                        <p>5-Interior and Features: The inside of the Yukon XL mirrors that of the regular Yukon in terms of design and features, but with added cargo room. Depending on the trim and options, it can be outfitted with advanced infotainment features, luxurious materials, and advanced safety tech.</p>
+                                        <p>6-Fuel Efficiency: Given the Yukon XL's larger size and weight, it might be slightly less fuel-efficient than its shorter counterpart. However, actual fuel economy figures can vary based on the engine and other factors.</p>
+                                       
+                                      <br>
+                                     <div class="col-md-4">
+                                        
+                                        <div class="img">
+                                            <a href="#"> <br><br><img src="https://images.carprices.com/pricebooks_data/usa/colorized/2022/GMC/View2/Yukon_XL_Denali/Denali/TC10906_GSK.png" > 
+                                             </a> 
+                                             <br><br>GMC yukon XL denali ultimate<br>
+                                             <div>
+                                                 <br><button type="button" class="btn btn-success espaned-larg"> 
+                                                    $98,735
+                                                  </button> 
+                                            </div> 
+                                            
+                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        
+                                        <div class="img">
+                                            <a href="#"> <img src="https://img.sm360.ca/ir/w600h400/images/newcar/ca/2023/gmc/yukon-xl/denali-ultimate/suv/2023_gmc_yukon-xl_denali-ultimate_01.jpg" > 
+                                             </a> GMC yukon XL denali
+                                             <div>
+                                                <br><button type="button" class="btn btn-success espaned-larg"> 
+                                                    $85,819
+                                                  </button> 
+                                            </div> 
+                                            
+                        
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+                                        
+                                        <div class="img">
+                                            <a href="#"> <br> <img src="https://edgecast-img.yahoo.net/mysterio/api/345138FF7AD1940EFA84EFD8037D78B18C1DA122334262F3FA63A0402A9DCA6E/autoblog/resizefill_w264_h149;quality_80;format_webp;cc_31536000;/https://s.aolcdn.com/commerce/autodata/images/USD10GMS292C021001.jpg" > 
+                                             </a> <br><br> GMC yukon XL sle
+                                             <div>
+                                               <div>
+                                        <br><button type="button" class="btn btn-success espaned-larg"> 
+                                            $65000
+                                          </button> 
+                                   
+                                            
+                        
+                                        </div>
+                                        
+                                    </div></div></div></div></div></div></div></div></div></div></div></div>
+                                    
+            <br>
+           
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <footer>
+        <br> 
+        
+          <div class="container">
+        
+        <div class="row  ">
+            <div class="col-md-6">
+                <div class="footer-content">
+            
+        
+            
+           <br><br> <h3 class="Textn" > Follow us on </h3>
+
+           <ul class="social">
+            <li> <a  href="#"><i class="bi bi-facebook"> </i></a> </li>  <li> <a href="https://instagram.com/_win0?utm_source=qr&igshid=MzNlNGNkZWQ4Mg=="><i class="bi bi-instagram"></i></a> </li>
+           
+            <li><a href="#"><i class="bi bi-twitter"></i></a> </li>
+            <li> <a href=" http://www.linkedin.com/in/mohammed-baqer-ahmed-"><i class="bi bi-linkedin"> </i></a></li>
+            <li> <a href=" https://youtube.com/@baqerahmed723?si=DoIZwS1E5nN7wi1H"><i class="bi bi-youtube"> </i></a></li>
+                  
+            </div></div>
+            <div class="col-md-6">
+                <div class="footer-content">
+               
+            
+        
+            
+                <br><br> <h3 class="Textn" >see more about us</h3>
+     
+                <ul class="social">
+                 <li><a href="#"><i class="bi bi-check-circle"> About</i></a> </li> 
+                  <li ><a href="#"><i class="bi bi-check-circle">   Support</i></a>  </li>
+                
+                 <li><a href="#"><i class="bi bi-check-circle">   Services</i></a>  </li>
+                 <li> <a href="#"><i class="bi bi-check-circle">   Professional Services</i></a> </li>
+                 <li><a href="#"><i class="bi bi-check-circle">   Company</i></a>  </li>
+                       
+                 </div></div>
+                 
+        </div>
+       </div>
+           
+        </footer>
+        
+        
+   
+
+    
+</body >
+</html>
